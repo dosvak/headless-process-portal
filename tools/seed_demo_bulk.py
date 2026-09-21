@@ -33,7 +33,9 @@ def open_task(user, piid):
         if t: return t['tkiid']
         time.sleep(1)
     return None
-def complete(user, tid, params): return rest(user, 'PUT', f'/task/{tid}?action=complete&parts=none', params={'params': json.dumps(params)})[0]
+def complete(user, tid, params):
+    rest(user, 'PUT', f'/task/{tid}?action=assign&toMe=true&parts=none')   # a group-assigned task must be claimed before a (non-admin) user may complete it (CWTBG0549E)
+    return rest(user, 'PUT', f'/task/{tid}?action=complete&parts=none', params={'params': json.dumps(params)})[0]
 def claim(user, tid): return rest(user, 'PUT', f'/task/{tid}?action=assign&toMe=true&parts=none')[0]
 def priority(user, tid, p): return rest('ADMIN', 'PUT', f'/task/{tid}?action=update&priority={p}&parts=none')[0] if ADMIN else 0
 def due(user, tid, hours): return rest('ADMIN', 'PUT', f'/task/{tid}?action=update&parts=none', params={'dueDate': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime(time.time() + hours * 3600))})[0] if ADMIN else 0
