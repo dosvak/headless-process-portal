@@ -1,0 +1,218 @@
+[
+ {
+  "family": "classic",
+  "purpose": "current user (sign-on)",
+  "method": "GET",
+  "path": "/rest/bpm/wle/v1/user/current",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "classic",
+  "purpose": "avatar",
+  "method": "GET",
+  "path": "/rest/bpm/wle/v1/avatar/current",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "classic",
+  "purpose": "users listing (Teams page)",
+  "method": "GET",
+  "path": "/rest/bpm/wle/v1/users",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "classic",
+  "purpose": "groups listing (Teams page)",
+  "method": "GET",
+  "path": "/rest/bpm/wle/v1/groups",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "classic",
+  "purpose": "task list (Work)",
+  "method": "PUT",
+  "path": "/rest/bpm/wle/v1/search/query",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "classic",
+  "purpose": "instance list",
+  "method": "PUT",
+  "path": "/rest/bpm/wle/v1/search/query",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "classic",
+  "purpose": "exposed processes (Launch)",
+  "method": "GET",
+  "path": "/rest/bpm/wle/v1/exposed/process",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "classic",
+  "purpose": "process apps",
+  "method": "GET",
+  "path": "/rest/bpm/wle/v1/processApps",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "classic",
+  "purpose": "saved searches",
+  "method": "GET",
+  "path": "/rest/bpm/wle/v1/searches/tasks",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "classic",
+  "purpose": "status overview",
+  "method": "GET",
+  "path": "/rest/bpm/wle/v1/processes/status/overview",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "classic",
+  "purpose": "mentions (notifications)",
+  "method": "GET",
+  "path": "/rest/bpm/wle/v1/social/instances/mentions",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "classic",
+  "purpose": "systems",
+  "method": "GET",
+  "path": "/rest/bpm/wle/v1/systems",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "v2",
+  "purpose": "swagger",
+  "method": "GET",
+  "path": "/bpm/docs",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "v2",
+  "purpose": "user tasks",
+  "method": "GET",
+  "path": "/bpm/user-tasks",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "v2",
+  "purpose": "processes",
+  "method": "GET",
+  "path": "/bpm/processes",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "ops",
+  "purpose": "swagger",
+  "method": "GET",
+  "path": "/ops/docs",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "ops",
+  "purpose": "process count (administrator)",
+  "method": "GET",
+  "path": "/ops/std/bpm/processes/count",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "ops",
+  "purpose": "containers (administrator)",
+  "method": "GET",
+  "path": "/ops/std/bpm/containers",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "federated",
+  "purpose": "systems",
+  "method": "GET",
+  "path": "/rest/bpm/federated/v1/systems",
+  "http": 404,
+  "error": ""
+ },
+ {
+  "family": "federated",
+  "purpose": "launchable entities",
+  "method": "GET",
+  "path": "/rest/bpm/federated/v1/launchableEntities",
+  "http": 404,
+  "error": ""
+ },
+ {
+  "family": "federated",
+  "purpose": "tasks (available)",
+  "method": "GET",
+  "path": "/rest/bpm/federated/v1/tasks",
+  "http": 404,
+  "error": ""
+ },
+ {
+  "family": "classic",
+  "purpose": "task details",
+  "method": "GET",
+  "path": "/rest/bpm/wle/v1/task/884?parts=all",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "classic",
+  "purpose": "task actions",
+  "method": "GET",
+  "path": "/rest/bpm/wle/v1/task/actions?taskIDs=884",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "classic",
+  "purpose": "task stream",
+  "method": "GET",
+  "path": "/rest/bpm/wle/v1/social/task/884/stream",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "classic",
+  "purpose": "instance details",
+  "method": "GET",
+  "path": "/rest/bpm/wle/v1/process/4?parts=all",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "classic",
+  "purpose": "instance actions",
+  "method": "GET",
+  "path": "/rest/bpm/wle/v1/process/4/actions",
+  "http": 200,
+  "error": ""
+ },
+ {
+  "family": "v2",
+  "purpose": "v2 instance",
+  "method": "GET",
+  "path": "/bpm/processes/2072.4?optional_parts=data,actions",
+  "http": 200,
+  "error": ""
+ }
+]

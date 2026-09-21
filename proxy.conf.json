@@ -1,0 +1,5 @@
+{
+  "/rest": { "target": "https://<process-center-host>:9443", "secure": false, "changeOrigin": true, "logLevel": "warn" },
+  "/bpm": { "target": "https://<process-center-host>:9443", "secure": false, "changeOrigin": true, "logLevel": "warn" },
+  "/ops": { "target": "https://<process-center-host>:9443", "secure": false, "changeOrigin": true, "logLevel": "warn" }
+}
