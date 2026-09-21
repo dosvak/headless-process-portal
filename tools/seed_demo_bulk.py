@@ -6,8 +6,8 @@ dates and comments. Idempotent enough to rerun (adds another batch).
 usage: python3 tools/seed_demo_bulk.py <engine base url> [count=200] [ids.json] [--snapshot]
   users / password come from DEMO_USERS (comma list, default demo.manager,demo.finance,demo.ops,demo.support,demo.user) and DEMO_PASSWORD
   (default demo1234); DEMO_ADMIN=user:password enables the priority / due-date variations (admin-only updates); --snapshot starts by
-  snapshotId (installed snapshot on a Workflow Server) instead of branchId. Task ids are read through the starter (a team member cannot
-  read an instance it has no task in yet)."""
+  snapshotId (installed snapshot on a Workflow Server) instead of branchId. Task ids are read through the admin (an instance's tasks are visible only to
+  assignees and administrators); without DEMO_ADMIN only the starts and the requester's own actions happen."""
 import sys, os, json, time, random, requests, urllib3
 urllib3.disable_warnings()
 args = [a for a in sys.argv[1:] if not a.startswith('--')]
@@ -27,8 +27,9 @@ def start(user, proc, params):
     if st != 200: print('  start failed', user, proc, st, (j.get('Data') or {}).get('errorMessage', '')[:80]); return None
     return j['data']['piid']
 def open_task(user, piid):
+    # the instance's task list is only visible to task assignees and administrators: read it as the admin when one is configured
     for _ in range(8):
-        st, j = rest(user, 'GET', f'/process/{piid}?parts=all'); t = next((x for x in (j.get('data') or {}).get('tasks', []) if x['status'] == 'Received'), None)
+        st, j = rest('ADMIN' if ADMIN else user, 'GET', f'/process/{piid}?parts=all'); t = next((x for x in (j.get('data') or {}).get('tasks', []) if x['status'] == 'Received'), None)
         if t: return t['tkiid']
         time.sleep(1)
     return None
