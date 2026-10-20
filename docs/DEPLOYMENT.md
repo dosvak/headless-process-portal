@@ -1,6 +1,8 @@
 # Deployment
 
-## Public demo: https://portaldemo.dosvak.com (permanent)
+## Public demo: portaldemo.dosvak.com (2026-09-21 - retired 2026-10-20)
+
+Retired with its host on 2026-10-20; the description below is kept as the recipe for running your own.
 
 * **Engine**: a dedicated IBM Business Automation Workflow 26.0.0.0 *Workflow Server* (Standard, offline, single cluster on WebSphere
   8.5.5.29 + Db2 11.5.8) in its own KVM virtual machine on the demo host (libvirt NAT network, 4 vCPU / 12 GB). The VM has **no
@@ -19,7 +21,7 @@
 * **TLS / DNS**: Cloudflare-proxied name (mode Full), origin certificate from the private lab CA on nginx; rate limit 20 req/s per client.
 
 
-## First demo (2026-09-11): https://headless.quickpod.org - the lab Process Center behind a port mapping
+## First demo (2026-09-11): headless.quickpod.org - the lab Process Center behind a port mapping (retired)
 
 User decision (2026-09-11): the demo runs **against the real lab Process Center**, reachable from the demo host through a
 port mapping. The engine host name is configured only in the nginx vhost on the host, not in this repository. No data is stubbed.

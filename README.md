@@ -4,10 +4,12 @@ A standalone Angular 22 application that replicates the functions of IBM Process
 Angular, including the task forms, and every action is a REST call to the process engine. Two modes: **live** (a Process Center /
 Process Server behind a same-origin proxy) and **demo** (stubbed in-memory engine for offline evaluation).
 
-## Try it: https://portaldemo.dosvak.com
+## Public demo (retired)
 
-A permanent public demo runs the portal **live against a real IBM Business Automation Workflow 26 Workflow Server** dedicated to it
-(no stubs). Sign in with one of the demo accounts - they are also shown on the login page, one click signs you in:
+The hosted demo at portaldemo.dosvak.com was retired on 2026-10-20 together with its host. To evaluate the portal without an engine,
+run it in **demo** mode (stubbed in-memory engine); `docs/DEPLOYMENT.md` describes how the hosted demo was built if you want to run
+your own. The hosted demo ran the portal **live against a real IBM Business Automation Workflow 26 Workflow Server** dedicated to it
+(no stubs). Visitors signed in with one of these demo accounts (also listed on the login page of the `portaldemo` build):
 
 | Account | Team in the sample application | What you see |
 |---|---|---|
@@ -17,9 +19,8 @@ A permanent public demo runs the portal **live against a real IBM Business Autom
 | `demo.support` | Support | support tickets and their confirmation loop |
 | `demo.user` | - (requester) | starts processes, follows the instances it created |
 
-Password for all five: **`demo1234`**. The accounts have team roles in the sample application only (no administration rights); the
-instances and tasks are shared between visitors and reset every night. Please treat the environment as a public playground: no
-personal data, no production use. IBM Business Automation Workflow is a product of IBM; this portal is an independent open-source
+Password for all five was **`demo1234`**. The accounts had team roles in the sample application only (no administration rights); the
+instances and tasks were shared between visitors and reset every night. IBM Business Automation Workflow is a product of IBM; this portal is an independent open-source
 client of its REST API.
 
 * [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) - the solution as presented by its architect (drivers, decisions, components, flows, risks)
